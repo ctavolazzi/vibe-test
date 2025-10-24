@@ -8,15 +8,35 @@ const execAsync = promisify(exec);
 /**
  * Run a command and return the output
  */
-async function runCommand(command, description) {
+async function runCommand(command, description, showOutput = true) {
   const spinner = ora(description).start();
 
   try {
-    const { stdout, stderr } = await execAsync(command);
+    const { stdout, stderr } = await execAsync(command, { maxBuffer: 10 * 1024 * 1024 });
     spinner.succeed(chalk.green(description));
+    
+    // Show output if requested
+    if (showOutput && stdout) {
+      console.log(chalk.gray(stdout.trim()));
+    }
+    
+    if (stderr && stderr.trim()) {
+      console.log(chalk.yellow('⚠️  Warnings:'));
+      console.log(chalk.gray(stderr.trim()));
+    }
+    
     return { success: true, output: stdout, error: stderr };
   } catch (error) {
     spinner.fail(chalk.red(description));
+    
+    // Always show error output
+    if (error.stdout) {
+      console.log(chalk.gray(error.stdout.trim()));
+    }
+    if (error.stderr) {
+      console.log(chalk.red(error.stderr.trim()));
+    }
+    
     return { success: false, output: error.stdout, error: error.stderr };
   }
 }
@@ -28,15 +48,26 @@ async function runPerformanceTests(url, quick = false) {
   console.log(chalk.cyan.bold('\n🚀 Performance Tests\n'));
 
   if (quick) {
-    await runCommand(
-      `npx lighthouse ${url} --quiet --chrome-flags="--headless"`,
-      'Quick Lighthouse scan'
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const reportPath = `./vibe-lighthouse-${timestamp}.html`;
+    
+    const result = await runCommand(
+      `npx lighthouse ${url} --output=html --output-path=${reportPath} --chrome-flags="--headless"`,
+      'Quick Lighthouse scan',
+      false
     );
+    
+    if (result.success) {
+      console.log(chalk.green(`\n📊 Report saved: ${reportPath}`));
+      console.log(chalk.gray(`   Open with: open ${reportPath}`));
+    }
   } else {
     await runCommand(
       `npx unlighthouse --site ${url}`,
-      'Complete performance scan (this may take a while...)'
+      'Complete performance scan (this may take a while...)',
+      false
     );
+    console.log(chalk.green('\n📊 Report saved to: .lighthouseci/ directory'));
   }
 }
 
@@ -69,8 +100,7 @@ async function runImageAnalysis() {
   const result = await runCommand(command, 'Analyzing image sizes');
 
   if (result.success && result.output) {
-    console.log(chalk.gray('\nTop 10 largest images:'));
-    console.log(result.output);
+    console.log(chalk.cyan('\n📊 Top 10 largest images:'));
   }
 }
 
@@ -92,11 +122,7 @@ async function runLinkCheck(url) {
 async function runCSSAnalysis() {
   console.log(chalk.cyan.bold('\n🎨 CSS Analysis\n'));
 
-  const result = await runCommand('npx cssstats src/style.css', 'Analyzing CSS complexity');
-
-  if (result.success && result.output) {
-    console.log(result.output);
-  }
+  await runCommand('npx cssstats src/style.css', 'Analyzing CSS complexity');
 }
 
 /**
