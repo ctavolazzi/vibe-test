@@ -252,27 +252,13 @@ We believe testing should be:
 - **Actionable** - Clear recommendations, not just scores
 - **Fun** - Testing should vibe, not bore
 
-## 🤝 Contributing
-
-Found a bug? Want to add a test? PRs welcome!
-
-1. Fork it
-2. Create your feature branch (`git checkout -b feature/amazing`)
-3. Commit your changes (`git commit -am 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing`)
-5. Create a Pull Request
-
 ## 📝 License
 
 MIT - Go wild, build cool stuff
-
-## 🙏 Credits
-
-Built with love for developers who ship quality.
 
 ---
 
 **Made with ☕ and vibes**
 
-For questions or issues, open an issue on GitHub or hit me up!
+A testing toolkit for developers who ship quality.
 
