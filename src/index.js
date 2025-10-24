@@ -1,0 +1,190 @@
+import chalk from 'chalk';
+import ora from 'ora';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+
+const execAsync = promisify(exec);
+
+/**
+ * Run a command and return the output
+ */
+async function runCommand(command, description) {
+  const spinner = ora(description).start();
+
+  try {
+    const { stdout, stderr } = await execAsync(command);
+    spinner.succeed(chalk.green(description));
+    return { success: true, output: stdout, error: stderr };
+  } catch (error) {
+    spinner.fail(chalk.red(description));
+    return { success: false, output: error.stdout, error: error.stderr };
+  }
+}
+
+/**
+ * Performance tests
+ */
+async function runPerformanceTests(url, quick = false) {
+  console.log(chalk.cyan.bold('\n🚀 Performance Tests\n'));
+
+  if (quick) {
+    await runCommand(
+      `npx lighthouse ${url} --quiet --chrome-flags="--headless"`,
+      'Quick Lighthouse scan'
+    );
+  } else {
+    await runCommand(
+      `npx unlighthouse --site ${url}`,
+      'Complete performance scan (this may take a while...)'
+    );
+  }
+}
+
+/**
+ * Accessibility tests
+ */
+async function runAccessibilityTests(url) {
+  console.log(chalk.cyan.bold('\n♿ Accessibility Tests\n'));
+
+  await runCommand(`npx pa11y ${url}`, 'WCAG compliance check');
+}
+
+/**
+ * Security tests
+ */
+async function runSecurityTests() {
+  console.log(chalk.cyan.bold('\n🔒 Security Tests\n'));
+
+  await runCommand('npm audit --omit=dev', 'NPM dependency audit');
+}
+
+/**
+ * Image analysis
+ */
+async function runImageAnalysis() {
+  console.log(chalk.cyan.bold('\n🖼️  Image Analysis\n'));
+
+  const command = `find public/images -type f \\( -name '*.jpg' -o -name '*.png' -o -name '*.webp' -o -name '*.gif' \\) -exec du -h {} \\; 2>/dev/null | sort -rh | head -10`;
+
+  const result = await runCommand(command, 'Analyzing image sizes');
+
+  if (result.success && result.output) {
+    console.log(chalk.gray('\nTop 10 largest images:'));
+    console.log(result.output);
+  }
+}
+
+/**
+ * Link checking
+ */
+async function runLinkCheck(url) {
+  console.log(chalk.cyan.bold('\n🔗 Link Validation\n'));
+
+  await runCommand(
+    `npx broken-link-checker ${url} -ro --exclude linkedin.com --exclude twitter.com --exclude facebook.com`,
+    'Checking for broken links'
+  );
+}
+
+/**
+ * CSS analysis
+ */
+async function runCSSAnalysis() {
+  console.log(chalk.cyan.bold('\n🎨 CSS Analysis\n'));
+
+  const result = await runCommand('npx cssstats src/style.css', 'Analyzing CSS complexity');
+
+  if (result.success && result.output) {
+    console.log(result.output);
+  }
+}
+
+/**
+ * SEO analysis
+ */
+async function runSEOAnalysis(url) {
+  console.log(chalk.cyan.bold('\n📈 SEO Analysis\n'));
+
+  await runCommand(`npx seo-analyzer ${url}`, 'Checking SEO optimization');
+}
+
+/**
+ * Load testing
+ */
+async function runLoadTest(url) {
+  console.log(chalk.cyan.bold('\n⚡ Load Testing\n'));
+
+  const command = `ab -n 1000 -c 10 ${url} 2>&1 | tail -20`;
+
+  await runCommand(command, 'Running stress test (1000 requests, 10 concurrent)');
+}
+
+/**
+ * Bundle analysis
+ */
+async function runBundleAnalysis() {
+  console.log(chalk.cyan.bold('\n📦 Bundle Analysis\n'));
+
+  await runCommand(
+    `npx source-map-explorer 'dist/assets/*.js' --html bundle-report.html`,
+    'Analyzing JavaScript bundles'
+  );
+
+  console.log(chalk.gray('  Report saved to: bundle-report.html'));
+}
+
+/**
+ * Main test runner
+ */
+export async function runTests(url, options) {
+  const startTime = Date.now();
+
+  console.log(chalk.gray(`\nStarting tests at ${new Date().toLocaleTimeString()}\n`));
+
+  // Run all tests if --all flag is used
+  if (options.all) {
+    await runPerformanceTests(url, options.quick);
+    await runAccessibilityTests(url);
+    await runSecurityTests();
+    await runImageAnalysis();
+    await runLinkCheck(url);
+    await runCSSAnalysis();
+    await runSEOAnalysis(url);
+    if (!options.quick) {
+      await runLoadTest(url);
+    }
+  } else {
+    // Run selected tests
+    if (options.perf) await runPerformanceTests(url, options.quick);
+    if (options.accessibility) await runAccessibilityTests(url);
+    if (options.security) await runSecurityTests();
+    if (options.images) await runImageAnalysis();
+    if (options.links) await runLinkCheck(url);
+    if (options.css) await runCSSAnalysis();
+    if (options.seo) await runSEOAnalysis(url);
+    if (options.load) await runLoadTest(url);
+    if (options.bundle) await runBundleAnalysis();
+
+    // If no specific test is selected, run a quick default suite
+    if (
+      !options.perf &&
+      !options.accessibility &&
+      !options.security &&
+      !options.images &&
+      !options.links &&
+      !options.css &&
+      !options.seo &&
+      !options.load &&
+      !options.bundle
+    ) {
+      console.log(chalk.yellow('No tests specified. Running quick default suite...\n'));
+      await runPerformanceTests(url, true);
+      await runAccessibilityTests(url);
+      await runSecurityTests();
+    }
+  }
+
+  const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+  console.log(chalk.gray(`\nCompleted in ${duration}s`));
+}
+

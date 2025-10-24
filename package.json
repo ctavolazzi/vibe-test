@@ -1,0 +1,39 @@
+{
+  "name": "vibe-test",
+  "version": "1.0.0",
+  "description": "A sick-as-fuck testing suite for web projects. Run all the tests, find all the issues, ship with confidence.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "vibe-test": "./bin/cli.js",
+    "vibe": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "node src/index.js",
+    "link": "npm link",
+    "dev": "node bin/cli.js"
+  },
+  "keywords": [
+    "testing",
+    "performance",
+    "accessibility",
+    "lighthouse",
+    "web",
+    "cli",
+    "automation",
+    "quality"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "ora": "^8.0.1",
+    "boxen": "^7.1.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
