@@ -1,0 +1,1943 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johnny Autoseed - A Concept for Local Food Systems</title>
+    <meta
+      name="description"
+      content="A concept exploring backyard robotics for local food production. Turn unused land into fresh, organic produce with less labor. Built for everyone."
+    />
+
+    <!-- Resource Hints for External Assets -->
+    <link rel="dns-prefetch" href="//cdn.shopify.com" />
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://johnnyautoseed.com/" />
+    <meta
+      property="og:title"
+      content="Johnny Autoseed - A Concept for Local Food Systems"
+    />
+    <meta
+      property="og:description"
+      content="Exploring backyard robotics for local food production. Turn unused land into fresh produce with less labor."
+    />
+    <meta property="og:image" content="/images/ja-site-preview.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://johnnyautoseed.com/" />
+    <meta
+      property="twitter:title"
+      content="Johnny Autoseed - A Concept for Local Food Systems"
+    />
+    <meta
+      property="twitter:description"
+      content="Exploring backyard robotics for local food production. Turn unused land into fresh produce."
+    />
+    <meta property="twitter:image" content="/images/ja-site-preview.webp" />
+
+    <!-- PWA & Mobile -->
+    <meta name="theme-color" content="#2d5016" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Phosphor Icons (Custom Subset - 18 icons, ~0.8KB vs 12KB) -->
+    <link
+      rel="preload"
+      href="/fonts/phosphor/Phosphor.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/fonts/phosphor/phosphor-icons-custom.css" />
+
+    <!-- Main stylesheet injected here by vite-plugin-html -->
+  </head>
+  <body>
+    <!-- Skip to main content for keyboard navigation -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Modern Header -->
+    <header class="modern-header" id="main-header" role="banner">
+      <div class="header-container">
+        <a href="#top" class="header-brand" aria-label="Johnny Autoseed Home">
+          <div class="brand-icon"><i class="ph ph-plant"></i></div>
+          <div class="brand-content">
+            <div class="brand-name">Johnny Autoseed</div>
+          </div>
+        </a>
+
+        <nav class="header-nav">
+          <a href="#theory" class="nav-link">How It Works</a>
+          <a href="#technology" class="nav-link">Technology</a>
+          <a href="#budgets" class="nav-link">Budgets</a>
+          <a href="#impact" class="nav-link">Impact</a>
+          <a href="#resources" class="nav-link">Resources</a>
+          <a href="#status" class="nav-link">Project Status</a>
+          <a href="/blog.html" class="nav-link">Blog</a>
+        </nav>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu-overlay" aria-hidden="true">
+        <nav class="mobile-nav">
+          <a href="#theory" class="mobile-nav-link">
+            <span class="link-number">01</span>
+            <span class="link-text">How It Works</span>
+          </a>
+          <a href="#technology" class="mobile-nav-link">
+            <span class="link-number">02</span>
+            <span class="link-text">Technology</span>
+          </a>
+          <a href="#budgets" class="mobile-nav-link">
+            <span class="link-number">03</span>
+            <span class="link-text">Budgets</span>
+          </a>
+          <a href="#impact" class="mobile-nav-link">
+            <span class="link-number">04</span>
+            <span class="link-text">Impact</span>
+          </a>
+          <a href="#resources" class="mobile-nav-link">
+            <span class="link-number">05</span>
+            <span class="link-text">Resources</span>
+          </a>
+          <a href="#status" class="mobile-nav-link">
+            <span class="link-number">06</span>
+            <span class="link-text">Project Status</span>
+          </a>
+          <a href="/blog.html" class="mobile-nav-link mobile-nav-cta">
+            <span class="link-icon"><i class="ph ph-book-open"></i></span>
+            <span class="link-text">Blog</span>
+          </a>
+        </nav>
+        <div class="mobile-menu-footer">
+          <p>Educational Resource · 2025</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="page-wrapper">
+      <div class="page-content">
+        <!-- Main Content -->
+        <main id="main-content" role="main">
+          <!-- Site Title Component -->
+          <section class="site-title" id="top">
+            <div class="site-title-container">
+              <h1 class="site-title-text">
+                <span class="title-word title-johnny">Johnny</span>
+                <span class="title-word title-autoseed gradient-shift">Autoseed</span>
+              </h1>
+              <div class="site-title-accent-line"></div>
+              <p class="site-title-tagline">Where Seeds Meet Silicon</p>
+              <div class="site-title-subtitle">
+                <span class="subtitle-text">Exploring next-gen food systems.</span>
+              </div>
+              <p class="hero-intro-text">
+                <em>What if robots could grow food in your backyard?</em>
+              </p>
+            </div>
+          </section>
+
+          <!-- Side by Side Videos Section -->
+          <section class="videos-section">
+            <h2 class="visually-hidden">Featured Technologies</h2>
+            <div class="videos-grid">
+              <!-- Mobile ALOHA Video -->
+              <div class="video-column">
+                <h3 class="video-title">
+                  <a
+                    href="https://mobile-aloha.github.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Mobile ALOHA</a
+                  >
+                </h3>
+                <div class="video-container-wrapper" data-video="mobile-aloha">
+                  <div class="video-container clickable">
+                    <video loop muted playsinline preload="none" data-lazy-video>
+                      <source src="/media/mobile-aloha.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Bimanual robot learns kitchen tasks through demonstration.
+                </p>
+              </div>
+
+              <!-- FarmBot Video -->
+              <div class="video-column">
+                <h3 class="video-title">
+                  <a href="https://farm.bot/" target="_blank" rel="noopener noreferrer"
+                    >FarmBot</a
+                  >
+                </h3>
+                <div class="video-container-wrapper" data-video="farmbot">
+                  <div class="video-container clickable">
+                    <video loop muted playsinline preload="none" data-lazy-video>
+                      <source
+                        src="https://cdn.shopify.com/s/files/1/2040/0289/files/Hero_Background_-_FarmBot_-_Take_Back_Control.mp4?v=1600992641"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <p class="video-description">
+                  Automated garden system plants, waters, and weeds autonomously.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Hero Section -->
+          <section class="hero-modern">
+            <!-- Simple gradient background (animations removed for performance) -->
+
+            <div class="hero-content-wrapper">
+              <h2 class="hero-headline">
+                <span class="headline-primary">
+                  <span class="word-reveal">Planting Robots</span>
+                </span>
+                <span class="headline-secondary">
+                  <span class="word-reveal">Where Food Deserts</span>
+                </span>
+                <span class="headline-accent">
+                  <span class="word-reveal gradient-shift">Bloom</span>
+                </span>
+              </h2>
+
+              <div class="hero-rotating-text">
+                <span class="rotating-prefix">Exploring</span>
+                <span class="rotating-divider"></span>
+                <span class="rotating-words">
+                  <span class="word active">Exclusive Innovation</span>
+                  <span class="word">First Adopter Technology</span>
+                  <span class="word">Suburban Reimagination</span>
+                  <span class="word">Autonomous Supply Chains</span>
+                  <span class="word">Neighborhood CSAs</span>
+                  <span class="word">Hyperlocal Production</span>
+                  <span class="word">Community Experiments</span>
+                </span>
+              </div>
+
+              <p class="hero-description">
+                <strong
+                  >Imagine turning unused land into a food production system with backyard
+                  robots.</strong
+                >
+                <br />
+                Fresh organic local produce. Less labor than ever before. Built for
+                everyone.
+                <br />
+                <br />
+                <span class="vision-line">That's the vision of</span>
+                <br />
+                <strong
+                  ><span class="gradient-shift hero-brand-name"
+                    >Johnny Autoseed</span
+                  ></strong
+                >
+              </p>
+
+              <div class="hero-stats">
+                <div class="stat-item">
+                  <div class="stat-number" data-count="23.5" data-suffix="M">0</div>
+                  <div class="stat-label">Americans in Food Deserts</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <div class="stat-number stat-price">$7K-26K</div>
+                  <div class="stat-label">From DIY to Professional</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <div class="stat-number">75-83%</div>
+                  <div class="stat-label">Herbicide Reduction (Field-Tested)</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <div class="stat-number" data-count="100" data-suffix="%">0</div>
+                  <div class="stat-label">Open Source</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Multi-Audience Value Proposition Section -->
+          <section class="multi-audience-section">
+            <div class="multi-audience-container">
+              <div class="section-header-center vision-header">
+                <div class="vision-icon-container">
+                  <div class="vision-sun">
+                    <div class="sun-horizon"></div>
+                    <div class="sun-rays-container">
+                      <div class="sun-ray ray-1"></div>
+                      <div class="sun-ray ray-2"></div>
+                      <div class="sun-ray ray-3"></div>
+                      <div class="sun-ray ray-4"></div>
+                      <div class="sun-ray ray-5"></div>
+                      <div class="sun-ray ray-6"></div>
+                      <div class="sun-ray ray-7"></div>
+                      <div class="sun-ray ray-8"></div>
+                      <div class="sun-ray ray-9"></div>
+                      <div class="sun-ray ray-10"></div>
+                      <div class="sun-ray ray-11"></div>
+                      <div class="sun-ray ray-12"></div>
+                    </div>
+                    <div class="sun-core"></div>
+                  </div>
+                </div>
+                <h2 class="section-title vision-title">The Vision</h2>
+                <p class="section-subtitle vision-subtitle">
+                  Exploring how backyard robotics and autonomous logistics could turn any
+                  unused land into productive food systems. From individual experiments to
+                  neighborhood projects built for everyone.
+                </p>
+              </div>
+
+              <div class="audience-tracks">
+                <!-- Lifestyle Track - FIRST -->
+                <div class="audience-track track-lifestyle track-featured">
+                  <div class="track-badge">EXCLUSIVE</div>
+                  <h3 class="track-title">First Adopter Luxury</h3>
+                  <p class="track-description">
+                    Automated gardens as the ultimate conversation piece. Press-button
+                    farm-to-table living at the forefront of innovation.
+                  </p>
+                  <ul class="track-benefits">
+                    <li>
+                      <strong>Early adopter positioning</strong> in an agricultural
+                      robotics market growing 18.3% annually through 2032
+                    </li>
+                    <li>
+                      <strong>Unique property value</strong> through cutting-edge
+                      automation
+                    </li>
+                    <li>
+                      <strong>Zero-effort freshness</strong> with completely automated
+                      systems
+                    </li>
+                  </ul>
+                  <p class="track-insight">Where innovation meets the dinner table.</p>
+                </div>
+
+                <!-- Expanded Vision Track - NEW -->
+                <div class="audience-track track-vision">
+                  <h3 class="track-title">Suburban Networks</h3>
+                  <p class="track-description">
+                    Suburbs where robots tend backyard plots, autonomous logistics handle
+                    harvest, and neighborhoods share hyperlocal produce.
+                  </p>
+                  <ul class="track-benefits">
+                    <li>
+                      <strong>Pooled resources</strong> for equipment and infrastructure
+                    </li>
+                    <li>
+                      <strong>Autonomous logistics</strong> handling harvest and
+                      distribution
+                    </li>
+                    <li>
+                      <strong>New supply chains</strong> from suburban yards to local
+                      grocers
+                    </li>
+                  </ul>
+                  <p class="track-insight">
+                    Reimagining suburbs as productive landscapes.
+                  </p>
+                </div>
+
+                <!-- Community Track - LAST -->
+                <div class="audience-track track-mission">
+                  <h3 class="track-title">Community Scale</h3>
+                  <p class="track-description">
+                    Collective automation experiments in food desert neighborhoods.
+                    Grant-funded hyperlocal production serving 23.5M Americans.
+                  </p>
+                  <ul class="track-benefits">
+                    <li>
+                      <strong>Collective investment</strong> through pooled resources and
+                      grants
+                    </li>
+                    <li>
+                      <strong>Optimized yields</strong> through precision automation and
+                      data-driven growing
+                    </li>
+                    <li><strong>Shared learning</strong> documented and open to all</li>
+                  </ul>
+                  <p class="track-insight">
+                    Luxury experiments today become community solutions tomorrow.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Community Garden Vision Image -->
+              <div class="vision-image-container">
+                <figure class="vision-image-figure">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="/images/community-garden-robots-480w.webp 480w, /images/community-garden-robots-768w.webp 768w, /images/community-garden-robots.webp 1024w"
+                      sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px"
+                    />
+                    <img
+                      src="/images/community-garden-robots.jpg"
+                      alt="Community garden with robots tending raised beds in urban residential setting"
+                      loading="lazy"
+                      width="1024"
+                      height="1024"
+                    />
+                  </picture>
+                  <figcaption class="vision-image-caption">
+                    <strong>Picture this:</strong>
+                    Multiple robots working autonomously to seed, grow, harvest, prepare,
+                    and deliver fresh produce. Moving across shared garden spaces, moving
+                    from backyard plots to community installations and beyond - this is
+                    what local food automation could look like at neighborhood scale.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="multi-audience-footer">
+                <div class="footer-content-wrapper">
+                  <div class="footer-image">
+                    <img
+                      src="/images/farmbot-1.jpg"
+                      alt="Automated garden system"
+                      loading="lazy"
+                      width="960"
+                      height="540"
+                    />
+                  </div>
+                  <div class="footer-text">
+                    <h3>One Concept, Multiple Applications</h3>
+                    <p>
+                      The same open-source approach works anywhere there's unused land. In
+                      individual yards, community gardens, shared spaces, or even urban
+                      rooftops - the technology scales to fit the need.
+                    </p>
+                    <div class="footer-highlights">
+                      <div class="highlight-item">
+                        <span class="highlight-icon"><i class="ph ph-house"></i></span>
+                        <span>Home Gardens</span>
+                      </div>
+                      <div class="highlight-item">
+                        <span class="highlight-icon"><i class="ph ph-plant"></i></span>
+                        <span>Community Plots</span>
+                      </div>
+                      <div class="highlight-item">
+                        <span class="highlight-icon"
+                          ><i class="ph ph-buildings"></i
+                        ></span>
+                        <span>Urban Spaces</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Complete Vision: Seed to Table Automation -->
+          <div class="vision-image-container-wide">
+            <figure class="vision-image-figure vision-image-figure-large">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="/images/autonomous-food-system-vision-480w.webp 480w, /images/autonomous-food-system-vision-768w.webp 768w, /images/autonomous-food-system-vision.webp 1024w"
+                  sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px"
+                />
+                <img
+                  src="/images/autonomous-food-system-vision.jpg"
+                  alt="Complete autonomous food system: robots seeding, harvesting, preparing and delivering fresh produce"
+                  loading="lazy"
+                  width="1024"
+                  height="1024"
+                />
+              </picture>
+              <figcaption class="vision-image-caption vision-image-caption-dark">
+                <strong>The Complete Vision:</strong>
+                Autonomous robots handling the entire food production cycle. Starting from
+                seeding, growing, and harvesting, to preparing, and even delivering fresh
+                produce grown right in your backyard. This is what local food automation
+                could look like at scale: accessible, sustainable, and completely
+                autonomous.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- How It Works -->
+          <div class="section-divider section-divider--h1" id="theory">
+            <span class="section-divider__badge section-divider__badge--number">01</span>
+            <h2 class="section-divider__title">How Johnny Autoseed Works</h2>
+          </div>
+          <section class="theory-section">
+            <p class="section-intro">
+              This concept combines two existing technologies. FarmBot provides precision
+              planting and watering. Mobile ALOHA-inspired robots handle harvest and prep.
+              Together, they could automate local food production from seed to table.
+            </p>
+
+            <div class="diagram-container">
+              <div class="diagram-flow">
+                <div class="flow-step">
+                  <div class="flow-number">A</div>
+                  <h3>Garden Automation</h3>
+                  <p>CNC gantry systems automatically tend raised garden beds</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                  <div class="flow-number">B</div>
+                  <h3>Mobile Harvest</h3>
+                  <p>Bimanual robots navigate between garden and kitchen</p>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                  <div class="flow-number">C</div>
+                  <h3>Food Preparation</h3>
+                  <p>Kitchen-ready assistance for washing, sorting, and meal prep</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kitchen Automation Visualization -->
+            <div class="vision-image-container-medium">
+              <figure class="vision-image-figure">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="/images/robot-kitchen-cooking-480w.webp 480w, /images/robot-kitchen-cooking-768w.webp 768w, /images/robot-kitchen-cooking.webp 1024w"
+                    sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px"
+                  />
+                  <img
+                    src="/images/robot-kitchen-cooking.jpg"
+                    alt="Bimanual robot preparing fresh vegetables in commercial kitchen"
+                    loading="lazy"
+                    width="1024"
+                    height="1024"
+                  />
+                </picture>
+                <figcaption class="vision-image-caption">
+                  <strong>From Garden to Kitchen:</strong>
+                  Bimanual robots handle harvest processing: washing, sorting, and prep
+                  work. This is the "Food Preparation" step in action, bridging the gap
+                  between garden automation and your dinner table ready to eat.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="two-column-comparison grid-2-col">
+              <div class="column column-farmbot">
+                <div class="column-header">
+                  <svg
+                    class="column-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2L12 8M12 8C10.3431 8 9 9.34315 9 11C9 12.6569 10.3431 14 12 14C13.6569 14 15 12.6569 15 11C15 9.34315 13.6569 8 12 8ZM12 14L12 22M7 22C7 19.2386 9.23858 17 12 17C14.7614 17 17 19.2386 17 22M3 11C3 11 4 11 5 11M19 11C19 11 20 11 21 11M6.34315 6.34315L7.75736 7.75736M17.6569 6.34315L16.2426 7.75736"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <h3>FarmBot Lineage</h3>
+                </div>
+                <div class="column-image">
+                  <img
+                    src="https://64.media.tumblr.com/e9ff988a665847a3886816d99e04b4d1/tumblr_oaw3ajQdBy1uqhy88o4_500.gifv"
+                    alt="FarmBot automated garden system in action"
+                    loading="lazy"
+                    width="500"
+                    height="281"
+                  />
+                </div>
+                <ul class="tech-list">
+                  <li>CNC gantry system with sub-millimeter precision</li>
+                  <li>Automated drip irrigation per plant</li>
+                  <li>Camera-guided pest detection</li>
+                  <li>8+ years, thousands of installations</li>
+                </ul>
+              </div>
+
+              <div class="column column-aloha">
+                <div class="column-header">
+                  <svg
+                    class="column-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 2H15M12 2V5M7 7H17C18.1046 7 19 7.89543 19 9V17C19 18.1046 18.1046 19 17 19H7C5.89543 19 5 18.1046 5 17V9C5 7.89543 5.89543 7 7 7Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle cx="9" cy="12" r="1.5" fill="currentColor" />
+                    <circle cx="15" cy="12" r="1.5" fill="currentColor" />
+                    <path
+                      d="M9 15C9 15 10 16 12 16C14 16 15 15 15 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M5 9L3 11M19 9L21 11M5 17L3 19M19 17L21 19"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <h3>Mobile ALOHA Influence</h3>
+                </div>
+                <div class="column-image">
+                  <img
+                    src="https://images.squarespace-cdn.com/content/v1/66b6b61fc5e5030973bd431f/e46b6c64-3a76-436a-b385-427049888fc9/mobile+aloha+-+wash+pans+-+Made+with+Clipchamp.gif"
+                    alt="Mobile ALOHA robot performing kitchen tasks"
+                    loading="lazy"
+                    width="600"
+                    height="338"
+                  />
+                </div>
+                <ul class="tech-list">
+                  <li>Bimanual manipulation (two arms)</li>
+                  <li>Learn-by-demonstration training</li>
+                  <li>Kitchen tasks from prep to cooking</li>
+                  <li>Stanford-backed household autonomy</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Concept Vision Video Section -->
+            <div class="vision-image-container-wide">
+              <div class="video-showcase">
+                <h3 class="video-showcase-title">The Vision in Motion</h3>
+                <p class="video-showcase-intro">
+                  A concept visualization exploring what neighborhood-scale autonomous
+                  food production could look like.
+                </p>
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/J1nFJFMddQ4"
+                    title="Concept video: autonomous food production vision"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+                <p class="video-caption">
+                  Conceptual visualization of what automated local food systems could
+                  become.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Reference Equipment -->
+          <div class="section-divider section-divider--h1" id="technology">
+            <span class="section-divider__badge section-divider__badge--number">02</span>
+            <h2 class="section-divider__title">Technology Foundations</h2>
+          </div>
+          <section class="reference-section">
+            <div class="reference-grid grid-2-col">
+              <article class="reference-card card-farmbot">
+                <div class="card-header">
+                  <h3>FarmBot Genesis XL</h3>
+                </div>
+                <div class="card-image">
+                  <img
+                    src="/images/farmbot-1.jpg"
+                    alt="FarmBot gantry system tending raised garden beds"
+                    loading="lazy"
+                    width="960"
+                    height="540"
+                  />
+                </div>
+                <div class="card-content">
+                  <p class="card-description">
+                    FarmBot demonstrates how precise, open hardware can automate planting
+                    and watering on the homestead scale.
+                  </p>
+
+                  <div class="card-specs">
+                    <div class="spec-item"><strong>Bed Size:</strong> 3m × 6m</div>
+                    <div class="spec-item"><strong>Precision:</strong> ±3mm accuracy</div>
+                    <div class="spec-item"><strong>Cost:</strong> ~$4,000 USD</div>
+                  </div>
+                  <p class="pricing-citation">
+                    <i class="ph ph-calendar-blank"></i>
+                    Pricing as of October 2025
+                    <br />
+                    <a
+                      href="#budgets"
+                      style="
+                        color: var(--medium-green);
+                        text-decoration: underline;
+                        font-weight: 600;
+                      "
+                      >See full budget options →</a
+                    >
+                  </p>
+
+                  <p class="card-detail">
+                    FarmBot remains the template for Johnny Autoseed's bed management. The
+                    full bill of materials, assembly guides, and software are freely
+                    available for adaptation.
+                  </p>
+                  <a
+                    href="https://farm.bot/"
+                    target="_blank"
+                    rel="noopener"
+                    class="card-link"
+                  >
+                    Visit FarmBot Website →
+                  </a>
+                </div>
+              </article>
+
+              <article class="reference-card card-aloha">
+                <div class="card-header">
+                  <h3>Mobile ALOHA Platform</h3>
+                </div>
+                <div class="card-image">
+                  <img
+                    src="/images/moal-2.jpeg"
+                    alt="Mobile ALOHA performing bimanual kitchen tasks"
+                    loading="lazy"
+                    width="292"
+                    height="173"
+                  />
+                </div>
+                <div class="card-content">
+                  <p class="card-description">
+                    Mobile ALOHA shows how low-cost manipulators can assist in kitchens,
+                    packing, and post-harvest handling.
+                  </p>
+
+                  <div class="card-specs">
+                    <div class="spec-item">
+                      <strong>Mobility:</strong> Omnidirectional base
+                    </div>
+                    <div class="spec-item">
+                      <strong>Arms:</strong> 2× 6-DOF manipulators
+                    </div>
+                    <div class="spec-item"><strong>Cost:</strong> ~$32,000 USD</div>
+                  </div>
+                  <p class="pricing-citation">
+                    <i class="ph ph-calendar-blank"></i>
+                    Pricing as of October 2025
+                    <br />
+                    <a
+                      href="#budgets"
+                      style="
+                        color: var(--medium-green);
+                        text-decoration: underline;
+                        font-weight: 600;
+                      "
+                      >See full budget options →</a
+                    >
+                  </p>
+
+                  <p class="card-detail">
+                    Johnny Autoseed leans on Mobile ALOHA's research to imagine autonomous
+                    harvest carts and cooperative kitchens that don't require
+                    million-dollar robots.
+                  </p>
+                  <a
+                    href="https://mobile-aloha.github.io/"
+                    target="_blank"
+                    rel="noopener"
+                    class="card-link"
+                  >
+                    Read Research Paper →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Economics & Budgets Section -->
+          <div class="section-divider section-divider--h1" id="budgets">
+            <span class="section-divider__badge section-divider__badge--number">03</span>
+            <h2 class="section-divider__title">What It Really Costs</h2>
+          </div>
+
+          <section class="budget-comparison-section">
+            <p class="section-intro">
+              A transparent look at real investment options for building your own
+              automated food production system. Three approaches for different goals,
+              budgets, and skill levels.
+            </p>
+
+            <div class="budget-cards-container">
+              <!-- Budget Card 1: DIY Open-Source -->
+              <article class="budget-card budget-card-diy">
+                <div class="budget-card-header">
+                  <div class="budget-badge">Best Value</div>
+                  <h3>DIY Open-Source Build</h3>
+                  <div class="budget-price">$6,800 - $11,200</div>
+                </div>
+                <div class="budget-card-content">
+                  <p class="budget-description">
+                    Source parts yourself and build using open-source plans. Perfect for
+                    makers, educators, and hands-on learners.
+                  </p>
+
+                  <div class="budget-highlights">
+                    <div class="highlight-item">
+                      <i class="ph ph-clock"></i>
+                      <span>80-120 hours</span>
+                    </div>
+                    <div class="highlight-item">
+                      <i class="ph ph-chart-line"></i>
+                      <span>53-77% savings</span>
+                    </div>
+                    <div class="highlight-item">
+                      <i class="ph ph-calendar"></i>
+                      <span>9-18 mo. breakeven</span>
+                    </div>
+                  </div>
+
+                  <ul class="budget-breakdown-list">
+                    <li>
+                      <span class="item-name">FarmBot (DIY or kit)</span>
+                      <span class="item-cost">$2,000-5,000</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Harvest assistant (DIY)</span>
+                      <span class="item-cost">$800-2,500</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Infrastructure</span>
+                      <span class="item-cost">$400-600</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Tools (if needed)</span>
+                      <span class="item-cost">$200-400</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Operating (6 months)</span>
+                      <span class="item-cost">$570</span>
+                    </li>
+                  </ul>
+
+                  <div class="budget-features">
+                    <p><strong>Best for:</strong> Learning, personal use, education</p>
+                    <p><strong>Monthly costs:</strong> $95 (vs $465 prototype)</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Budget Card 2: Hybrid Approach (RECOMMENDED) -->
+              <article class="budget-card budget-card-hybrid budget-card-featured">
+                <div class="budget-card-header">
+                  <div class="budget-badge">Recommended</div>
+                  <h3>Hybrid Approach</h3>
+                  <div class="budget-price">$15,000 - $18,000</div>
+                </div>
+                <div class="budget-card-content">
+                  <p class="budget-description">
+                    Start with official FarmBot kit and DIY harvest assistant, then
+                    upgrade to professional gear as revenue grows.
+                  </p>
+
+                  <div class="budget-highlights">
+                    <div class="highlight-item">
+                      <i class="ph ph-clock"></i>
+                      <span>60-90 hours</span>
+                    </div>
+                    <div class="highlight-item">
+                      <i class="ph ph-rocket-launch"></i>
+                      <span>Phased investment</span>
+                    </div>
+                    <div class="highlight-item">
+                      <i class="ph ph-calendar"></i>
+                      <span>10-15 mo. breakeven</span>
+                    </div>
+                  </div>
+
+                  <div class="budget-phases">
+                    <div class="phase-item">
+                      <strong>Phase 1:</strong> $7K-8K
+                      <p>FarmBot kit + DIY gripper + smartphone content</p>
+                    </div>
+                    <div class="phase-item">
+                      <strong>Phase 2:</strong> $8K-10K
+                      <p>Professional camera, mobile platform, computing upgrade</p>
+                    </div>
+                  </div>
+
+                  <div class="budget-features">
+                    <p><strong>Best for:</strong> Content creators, balanced approach</p>
+                    <p>
+                      <strong>Key advantage:</strong> Lower initial risk, authentic
+                      learning journey content
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Budget Card 3: Professional Prototype -->
+              <article class="budget-card budget-card-prototype">
+                <div class="budget-card-header">
+                  <div class="budget-badge">Professional</div>
+                  <h3>Prototype Development</h3>
+                  <div class="budget-price">$24,000 - $26,300</div>
+                </div>
+                <div class="budget-card-content">
+                  <p class="budget-description">
+                    Complete professional system with high-quality content production
+                    gear. Built for business, YouTube channels, and commercial
+                    demonstration.
+                  </p>
+
+                  <div class="budget-highlights">
+                    <div class="highlight-item">
+                      <i class="ph ph-clock"></i>
+                      <span>40-60 hours</span>
+                    </div>
+                    <div class="highlight-item">
+                      <i class="ph ph-lightning"></i>
+                      <span>Fastest to market</span>
+                    </div>
+                    <div class="highlight-item">
+                      <i class="ph ph-calendar"></i>
+                      <span>10-15 mo. breakeven</span>
+                    </div>
+                  </div>
+
+                  <ul class="budget-breakdown-list">
+                    <li>
+                      <span class="item-name">FarmBot Genesis XL</span>
+                      <span class="item-cost">$4,995</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Smart harvest cart</span>
+                      <span class="item-cost">$6,000-8,000</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Infrastructure</span>
+                      <span class="item-cost">$3,200</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Content production</span>
+                      <span class="item-cost">$3,900</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Operating (6 months)</span>
+                      <span class="item-cost">$2,790</span>
+                    </li>
+                    <li>
+                      <span class="item-name">Contingency (15%)</span>
+                      <span class="item-cost">$3,133</span>
+                    </li>
+                  </ul>
+
+                  <div class="budget-features">
+                    <p><strong>Best for:</strong> Business, professional content</p>
+                    <p>
+                      <strong>Support:</strong> Vendor warranties and technical support
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- ROI Summary Panel -->
+            <div class="roi-summary-panel">
+              <div class="roi-header">
+                <i class="ph ph-trend-up"></i>
+                <h3>Return on Investment Analysis</h3>
+              </div>
+              <div class="roi-content">
+                <div class="roi-item">
+                  <div class="roi-label">Food Production Value</div>
+                  <div class="roi-value">$120-350/year</div>
+                  <div class="roi-detail">30-50 lbs of organic vegetables annually</div>
+                </div>
+                <div class="roi-item">
+                  <div class="roi-label">Time Savings Value</div>
+                  <div class="roi-value">$2,000/year</div>
+                  <div class="roi-detail">80-100 hours saved at $25/hour</div>
+                </div>
+                <div class="roi-item">
+                  <div class="roi-label">Total Annual Value</div>
+                  <div class="roi-value">~$2,200/year</div>
+                  <div class="roi-detail">Combined food and time savings</div>
+                </div>
+                <div class="roi-item">
+                  <div class="roi-label">Payback Period</div>
+                  <div class="roi-value">1.1 - 2.3 years</div>
+                  <div class="roi-detail">
+                    DIY build to official kit (when valuing time savings)
+                  </div>
+                </div>
+              </div>
+              <div class="roi-note">
+                <p>
+                  <strong>Content Creator Bonus:</strong> Building in public generates
+                  $5K-15K in first-year ad revenue, sponsorships, and affiliate income,
+                  potentially achieving breakeven in 6-18 months.
+                </p>
+              </div>
+            </div>
+
+            <!-- Download CTA -->
+            <div class="budget-download-cta">
+              <div class="download-content">
+                <i class="ph ph-file-pdf"></i>
+                <div class="download-text">
+                  <h4>Complete Budget Guide</h4>
+                  <p>
+                    Detailed parts lists, vendor sources, ROI calculations, and decision
+                    frameworks
+                  </p>
+                </div>
+                <a
+                  href="/downloads/johnny-autoseed-budget-guide.pdf"
+                  class="btn-download"
+                  download
+                >
+                  Download Full Budget PDF
+                  <i class="ph ph-download-simple"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Component 1: Timeline -->
+          <div class="section-divider section-divider--h2">
+            <span class="section-divider__badge section-divider__badge--label"
+              >Timeline</span
+            >
+            <h2 class="section-divider__title">Project Evolution</h2>
+          </div>
+          <section class="timeline-section">
+            <p class="section-intro">
+              A transparent look at how Johnny Autoseed evolved from observation to
+              concept to educational resource.
+            </p>
+
+            <div class="timeline-container">
+              <div class="timeline-item">
+                <div class="timeline-marker"><i class="ph ph-eye"></i></div>
+                <div class="timeline-content">
+                  <div class="timeline-date">2016-2023</div>
+                  <h3>Observation Phase</h3>
+                  <p>
+                    Watched FarmBot mature from Kickstarter to thousands of installations
+                    worldwide. Observed Mobile ALOHA research emerge from Stanford labs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"><i class="ph ph-lightbulb"></i></div>
+                <div class="timeline-content">
+                  <div class="timeline-date">Early 2024</div>
+                  <h3>Concept Development</h3>
+                  <p>
+                    Connected dots between precision agriculture and mobile manipulation.
+                    Sketched theoretical architecture for food desert applications.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"><i class="ph ph-users"></i></div>
+                <div class="timeline-content">
+                  <div class="timeline-date">Mid 2024</div>
+                  <h3>Community Research</h3>
+                  <p>
+                    Studied food desert statistics, talked with community organizers,
+                    documented accessibility challenges in urban and rural areas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item timeline-current">
+                <div class="timeline-marker"><i class="ph ph-book-open"></i></div>
+                <div class="timeline-content">
+                  <div class="timeline-date">Late 2024 - Present</div>
+                  <h3>Educational Resource</h3>
+                  <p>
+                    Publishing research and concept documentation as educational material.
+                    Sharing insights to inspire builders, researchers, and organizers
+                    working on similar challenges.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Impact Section -->
+          <div class="section-divider section-divider--h1" id="impact">
+            <span class="section-divider__badge section-divider__badge--number">04</span>
+            <h2 class="section-divider__title">Why This Matters</h2>
+          </div>
+          <section class="impact-section">
+            <div class="impact-stat-banner">
+              <div class="stat-item">
+                <div class="stat-number">23.5M</div>
+                <div class="stat-label">Americans in Food Deserts</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-number">$3-4K</div>
+                <div class="stat-label">Per FarmBot System</div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Open Source</div>
+              </div>
+            </div>
+
+            <div class="impact-grid grid-3-col">
+              <div class="impact-card">
+                <h3>Local Food Security</h3>
+                <p>
+                  Turn unused land into food production. Less reliance on distant supply
+                  chains. More control over what you eat and where it comes from.
+                </p>
+                <p class="impact-insight">
+                  As technology improves and costs decrease, automated local food systems
+                  could become accessible to everyone.
+                </p>
+              </div>
+
+              <div class="impact-card">
+                <h3>Space Transformation</h3>
+                <p>
+                  Any unused land could produce food. Backyards, empty lots, rooftops,
+                  community spaces. Automation makes it possible without heavy labor.
+                </p>
+                <p class="impact-insight">
+                  From unproductive space to fresh food source. From isolated plots to
+                  connected local food networks.
+                </p>
+              </div>
+
+              <div class="impact-card">
+                <h3>Open-Source Foundation</h3>
+                <p>
+                  Built on FarmBot and Mobile ALOHA research. The technology remains
+                  accessible. What works at any scale uses the same open-source
+                  foundations.
+                </p>
+                <p class="impact-insight">
+                  When technology is open and replicable, anyone can adapt it to their
+                  needs and context.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- FAQ Accordion -->
+          <div class="section-divider section-divider--h2">
+            <span class="section-divider__badge section-divider__badge--label">FAQ</span>
+            <h2 class="section-divider__title">Frequently Asked Questions</h2>
+          </div>
+          <section class="faq-section">
+            <p class="section-intro">
+              Common questions about Johnny Autoseed, automated farming, and getting
+              started.
+            </p>
+
+            <div class="faq-container">
+              <details class="faq-item">
+                <summary class="faq-question">
+                  Is Johnny Autoseed a real product I can buy?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    No. Johnny Autoseed is an educational concept publication, not a
+                    commercial product. This site serves as reference material documenting
+                    how existing open-source technologies could converge. The foundational
+                    technologies (FarmBot and Mobile ALOHA research) are real and
+                    available for builders to experiment with today.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  Can I actually build this system today?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    You can build the garden automation portion using FarmBot
+                    (commercially available). The mobile manipulation component would
+                    require significant robotics expertise and $30K+ investment. We
+                    recommend starting with FarmBot alone and documenting your learnings.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  Why focus on food deserts specifically?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    23.5 million Americans live in food deserts-areas lacking access to
+                    fresh, affordable produce. Automated farming could enable hyperlocal
+                    food production in these communities where labor time and agricultural
+                    expertise are scarce. The goal is democratizing food production, not
+                    replacing existing farms.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  Is automated farming actually more sustainable?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    It depends. Precision drip irrigation systems can reduce water usage
+                    significantly compared to traditional methods, and mechanical weeding
+                    eliminates chemical herbicides. However, manufacturing robots has
+                    environmental costs. For urban/suburban food deserts without existing
+                    agriculture, the net impact could be positive. Context matters.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  Will Johnny Autoseed development continue?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    This site currently serves as educational documentation of conceptual
+                    possibilities. Any future development updates will be announced here
+                    first. The goal remains advancing open-source, community-first
+                    approaches to automated food production as documented in this
+                    publication.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  How can I support similar projects?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Support FarmBot by purchasing their kits or contributing to their
+                    open-source software. Support food desert communities by volunteering
+                    with local food cooperatives. Share knowledge by documenting your own
+                    builds and contributing to maker communities.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  Can I use this concept for my own project?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Absolutely! This concept is shared freely for educational and
+                    inspirational purposes. If you build something inspired by Johnny
+                    Autoseed, we'd love to hear about it. Please share your learnings
+                    openly to help others working on food accessibility.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">Who is this really for?</summary>
+                <div class="faq-answer">
+                  <p>
+                    <strong>Everyone with unused land.</strong> Busy families wanting
+                    fresh food without the labor. Elderly residents who miss gardening but
+                    can't manage the physical work. Communities in food deserts seeking
+                    local food access. People concerned about supply chain disruptions.
+                  </p>
+                  <p>
+                    This concept explores how automation could make food production
+                    accessible regardless of physical ability, time constraints, or
+                    agricultural expertise.
+                  </p>
+                  <p>
+                    Built on open-source foundations, it's designed to work at any
+                    scale-from a single backyard to shared community spaces.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  Is this the ultimate conversation piece for luxury properties?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    <strong>Absolutely.</strong> Think of it as the next evolution of home
+                    automation-after smart thermostats, security systems, and voice
+                    assistants comes <em>autonomous food production</em>. High-end
+                    properties increasingly compete on unique wellness amenities. An
+                    automated garden positions you at the absolute forefront of
+                    innovation.
+                  </p>
+                  <p>
+                    The autonomous farm equipment market is projected to reach $55B by
+                    2032, with growing interest in residential applications. Early
+                    adopters are integrating FarmBot-style systems not just for fresh
+                    food, but as lifestyle technology that sparks conversation and
+                    demonstrates innovation leadership. This is "Nest for gardening, Tesla
+                    for agriculture."
+                  </p>
+                  <p>
+                    Custom installations can be tailored to your property-rooftop gardens,
+                    balcony systems, backyard showcases. Work with installers to create
+                    something uniquely yours while being among the first to deploy
+                    precision agriculture robotics at home.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">What about rising grocery costs?</summary>
+                <div class="faq-answer">
+                  <p>
+                    The economic case is strengthening. A FarmBot Express ($3-4K) could
+                    produce $1,500-2,000 worth of produce annually at current grocery
+                    prices, suggesting 2-3 year payback. Research shows yield improvements
+                    of 2.5-30% depending on crop type and implementation. As food costs
+                    rise and robot costs fall, the ROI math improves for families seeking
+                    long-term food security.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">What does recent research show?</summary>
+                <div class="faq-answer">
+                  <p>
+                    Peer-reviewed field studies show 75-83% herbicide reduction with
+                    robotic weeding systems (Gerhards et al. 2024). Research demonstrates
+                    labor cost reductions of 28-50% in specific applications like weeding
+                    and transplanting, with yield improvements ranging from 2.5% to 30%
+                    depending on crop type and implementation. Agricultural robotics
+                    attracted $769M in global investment in 2023 across nearly 300 funded
+                    companies. Digital delivery platforms now provide coverage to 96-99%
+                    of metropolitan food desert residents (Brookings 2022), though cost
+                    and connectivity barriers remain. The technology shows promise—the
+                    challenge is scaling access equitably.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  How does this specifically help food deserts?
+                </summary>
+                <div class="faq-answer">
+                  <p>
+                    Food deserts face two barriers: distance to fresh food and often
+                    limited agricultural expertise. Automated systems could enable
+                    hyperlocal production where traditional farming isn't viable-urban
+                    lots, rooftops, community centers. Digital delivery platforms now
+                    provide coverage to 96-99% of metropolitan food deserts, but 4.5M
+                    rural residents remain underserved. Hyperlocal automation might
+                    complement (not replace) delivery infrastructure, especially where
+                    internet access or delivery costs remain barriers.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <!-- Component 6: Curated Reading List -->
+          <div class="section-divider section-divider--h1" id="resources">
+            <span class="section-divider__badge section-divider__badge--number">05</span>
+            <h2 class="section-divider__title">Essential Reading & Resources</h2>
+          </div>
+          <section class="reading-list-section">
+            <p class="section-intro">
+              Curated materials for builders, researchers, and organizers exploring
+              automated food production.
+            </p>
+
+            <div class="reading-categories grid-3-col">
+              <div class="reading-category">
+                <h3 class="category-header">Technical Foundations</h3>
+                <ul class="reading-list">
+                  <li>
+                    <a
+                      href="https://genesis.farm.bot/docs"
+                      target="_blank"
+                      rel="noopener"
+                      class="reading-link"
+                    >
+                      <strong class="link-title">FarmBot Documentation</strong>
+                      <span class="link-description"
+                        >Complete assembly guides, software tutorials, and
+                        troubleshooting</span
+                      >
+                      <span class="link-arrow">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://arxiv.org/abs/2401.02117"
+                      target="_blank"
+                      rel="noopener"
+                      class="reading-link"
+                    >
+                      <strong class="link-title">Mobile ALOHA Paper</strong>
+                      <span class="link-description"
+                        >Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body
+                        Teleoperation</span
+                      >
+                      <span class="link-arrow">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://docs.ros.org/en/humble/Tutorials.html"
+                      target="_blank"
+                      rel="noopener"
+                      class="reading-link"
+                    >
+                      <strong class="link-title">ROS2 Tutorials</strong>
+                      <span class="link-description"
+                        >Robot Operating System fundamentals for mobile manipulation</span
+                      >
+                      <span class="link-arrow">→</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="reading-category">
+                <h3 class="category-header">Food Systems Context</h3>
+                <ul class="reading-list">
+                  <li>
+                    <a
+                      href="https://www.ers.usda.gov/data-products/food-access-research-atlas/"
+                      target="_blank"
+                      rel="noopener"
+                      class="reading-link"
+                    >
+                      <strong class="link-title">USDA Food Access Research Atlas</strong>
+                      <span class="link-description"
+                        >Interactive map showing food desert locations across
+                        America</span
+                      >
+                      <span class="link-arrow">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="reading-item-no-link">
+                      <strong class="link-title">"The Good Food Revolution"</strong>
+                      <span class="link-description"
+                        >Will Allen's memoir on urban farming and community food
+                        systems</span
+                      >
+                      <span class="link-meta">ISBN: 978-1592407668</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.openfoodnetwork.org/"
+                      target="_blank"
+                      rel="noopener"
+                      class="reading-link"
+                    >
+                      <strong class="link-title">Open Food Network</strong>
+                      <span class="link-description"
+                        >Open-source platform for local food enterprises and
+                        cooperatives</span
+                      >
+                      <span class="link-arrow">→</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="reading-category">
+                <h3 class="category-header">Community Organizing</h3>
+                <ul class="reading-list">
+                  <li>
+                    <a
+                      href="https://www.fic.coop/"
+                      target="_blank"
+                      rel="noopener"
+                      class="reading-link"
+                    >
+                      <strong class="link-title">Cooperative Development Toolkit</strong>
+                      <span class="link-description"
+                        >Resources for starting and managing food cooperatives</span
+                      >
+                      <span class="link-arrow">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.communitygarden.org/"
+                      target="_blank"
+                      rel="noopener"
+                      class="reading-link"
+                    >
+                      <strong class="link-title">Community Garden Startup Guide</strong>
+                      <span class="link-description"
+                        >American Community Gardening Association resources</span
+                      >
+                      <span class="link-arrow">→</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://clf.jhsph.edu/projects/urban-agriculture"
+                      target="_blank"
+                      rel="noopener"
+                      class="reading-link"
+                    >
+                      <strong class="link-title">Urban Agriculture Policy</strong>
+                      <span class="link-description"
+                        >Johns Hopkins Center for a Livable Future research</span
+                      >
+                      <span class="link-arrow">→</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Potential Applications Section -->
+          <div class="section-divider section-divider--h2">
+            <span class="section-divider__badge section-divider__badge--label"
+              >Applications</span
+            >
+            <h2 class="section-divider__title">Potential Applications</h2>
+          </div>
+          <section class="applications-section">
+            <p class="section-intro">
+              Where could automated food production fit? Any space with unused land. From
+              individual homes to shared community spaces, the concept scales to meet
+              different needs.
+            </p>
+
+            <div class="applications-grid">
+              <!-- Application 1: Individual Homes -->
+              <article class="application-card">
+                <div class="application-icon">
+                  <i class="ph ph-house"></i>
+                </div>
+                <h3 class="application-title">Home Gardens</h3>
+                <p class="application-description">
+                  Backyards, side yards, any unused space. Fresh food without the labor.
+                  Good for busy families or anyone wanting local produce.
+                </p>
+                <ul class="application-features">
+                  <li>Fresh food at home</li>
+                  <li>Less grocery reliance</li>
+                  <li>Teaching opportunity for kids</li>
+                </ul>
+              </article>
+
+              <!-- Application 2: Community Spaces -->
+              <article class="application-card">
+                <div class="application-icon">
+                  <i class="ph ph-users-three"></i>
+                </div>
+                <h3 class="application-title">Community Gardens</h3>
+                <p class="application-description">
+                  Shared spaces in neighborhoods. Pooled resources, shared harvest. Good
+                  for areas lacking fresh food access.
+                </p>
+                <ul class="application-features">
+                  <li>Local food production</li>
+                  <li>Shared investment</li>
+                  <li>Community building</li>
+                </ul>
+              </article>
+
+              <!-- Application 3: Educational Use -->
+              <article class="application-card">
+                <div class="application-icon">
+                  <i class="ph ph-graduation-cap"></i>
+                </div>
+                <h3 class="application-title">Schools & Universities</h3>
+                <p class="application-description">
+                  Hands-on learning tool. Teaches robotics, programming, agriculture.
+                  Produces food for cafeterias.
+                </p>
+                <ul class="application-features">
+                  <li>STEM education</li>
+                  <li>Real-world projects</li>
+                  <li>Sustainable practices</li>
+                </ul>
+              </article>
+
+              <!-- Application 4: Senior Living -->
+              <article class="application-card">
+                <div class="application-icon">
+                  <i class="ph ph-heart"></i>
+                </div>
+                <h3 class="application-title">Senior Communities</h3>
+                <p class="application-description">
+                  Gardening without physical strain. Residents plan, automation does the
+                  work. Therapeutic and productive.
+                </p>
+                <ul class="application-features">
+                  <li>No heavy lifting</li>
+                  <li>Mental engagement</li>
+                  <li>Fresh produce access</li>
+                </ul>
+              </article>
+
+              <!-- Application 5: Urban Spaces -->
+              <article class="application-card">
+                <div class="application-icon">
+                  <i class="ph ph-buildings"></i>
+                </div>
+                <h3 class="application-title">Rooftops & Vacant Lots</h3>
+                <p class="application-description">
+                  Turn unused urban space into food production. Good for dense cities with
+                  limited land.
+                </p>
+                <ul class="application-features">
+                  <li>Space optimization</li>
+                  <li>Urban food access</li>
+                  <li>Productive use of empty land</li>
+                </ul>
+              </article>
+
+              <!-- Application 6: Workplace Wellness -->
+              <article class="application-card">
+                <div class="application-icon">
+                  <i class="ph ph-briefcase"></i>
+                </div>
+                <h3 class="application-title">Office & Campus</h3>
+                <p class="application-description">
+                  Fresh ingredients for cafeterias. Sustainability demonstration. Employee
+                  wellness benefit.
+                </p>
+                <ul class="application-features">
+                  <li>On-site fresh food</li>
+                  <li>Wellness program</li>
+                  <li>Sustainability showcase</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="applications-footer">
+              <p>
+                <strong>One Concept, Many Uses:</strong> The same open-source approach
+                works anywhere there's unused land. As costs fall and technology improves,
+                local automated food production could become accessible to everyone.
+              </p>
+            </div>
+          </section>
+
+          <!-- NEW Component 12: Newsletter Signup -->
+          <section class="newsletter-section disabled">
+            <div class="newsletter-container">
+              <div class="newsletter-content">
+                <h2>Stay Informed About Updates</h2>
+                <p>
+                  Sign up to be notified about project updates or to receive occasional
+                  educational content about automated farming and food accessibility
+                  innovations.
+                </p>
+              </div>
+
+              <form class="newsletter-form" id="newsletter-form">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="newsletter-email"
+                    placeholder="Enter your email address"
+                    required
+                    disabled
+                  />
+                  <button type="submit" class="newsletter-submit" disabled>
+                    Notify Me
+                  </button>
+                </div>
+                <p class="newsletter-privacy">
+                  <i class="ph ph-lock"></i> No spam, no data sharing. Educational updates
+                  only. Unsubscribe anytime.
+                </p>
+                <div class="newsletter-message" id="newsletter-message"></div>
+              </form>
+            </div>
+            <div class="coming-soon-banner">
+              <div class="banner-badge"><i class="ph ph-warning"></i> Coming Soon</div>
+              <p class="banner-text">We're still building this feature!</p>
+              <p class="banner-subtext">
+                Bookmark this page to check back later for updates
+              </p>
+            </div>
+          </section>
+
+          <!-- Status Section -->
+          <div class="section-divider section-divider--h1" id="status">
+            <span class="section-divider__badge section-divider__badge--number">06</span>
+            <h2 class="section-divider__title">Project Status & Transparency</h2>
+          </div>
+          <section class="status-section">
+            <div class="status-badge">
+              <span class="badge-icon"><i class="ph ph-books"></i></span>
+              <span class="badge-text">Educational Concept</span>
+            </div>
+
+            <div class="status-main">
+              <h3 class="status-title">An Open Resource for Food System Innovation</h3>
+              <p class="status-description">
+                Johnny Autoseed documents how proven technologies like
+                <strong>FarmBot</strong> and <strong>Mobile ALOHA</strong> could converge
+                to address food accessibility challenges. This is a conceptual exploration
+                designed to inspire builders and inform the broader innovation
+                conversation.
+              </p>
+            </div>
+
+            <div class="status-details-grid grid-3-col">
+              <div class="status-detail-card">
+                <div class="card-icon"><i class="ph ph-info"></i></div>
+                <h3>What This Means</h3>
+                <ul>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> No active development or fundraising
+                  </li>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> No beta testing or waitlist
+                    collection
+                  </li>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> All content for educational purposes
+                  </li>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> Future updates announced here first
+                  </li>
+                </ul>
+              </div>
+
+              <div class="status-detail-card">
+                <div class="card-icon"><i class="ph ph-lightbulb"></i></div>
+                <h3>Why Share This?</h3>
+                <p>
+                  Food insecurity is critical, and open knowledge sharing accelerates
+                  solutions. By documenting this publicly, we aim to:
+                </p>
+                <ul>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> Inspire builders working on similar
+                    challenges
+                  </li>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> Demonstrate convergence
+                    opportunities
+                  </li>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> Contribute to broader innovation
+                    dialogue
+                  </li>
+                </ul>
+              </div>
+
+              <div class="status-detail-card">
+                <div class="card-icon"><i class="ph ph-wrench"></i></div>
+                <h3>For Builders</h3>
+                <p>If you're inspired to prototype:</p>
+                <ul>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> Start with FarmBot in your maker
+                    space
+                  </li>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> Document adaptations as open-source
+                  </li>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> Prioritize voices from affected
+                    communities
+                  </li>
+                  <li>
+                    <i class="ph ph-arrow-right"></i> Share learnings with the ecosystem
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+        <!-- End Main Content -->
+
+        <!-- Footer -->
+        <footer class="field-footer" role="contentinfo">
+          <div class="footer-content grid-3-col">
+            <div class="footer-col">
+              <h3>About This Publication</h3>
+              <p>
+                Johnny Autoseed explores how automation could turn any unused land into
+                local food production. A concept built on open-source foundations,
+                designed for everyone.
+              </p>
+            </div>
+            <div class="footer-col">
+              <h3>Resources</h3>
+              <ul>
+                <li>
+                  <a href="https://farm.bot/" target="_blank" rel="noopener"
+                    >FarmBot.io</a
+                  >
+                </li>
+                <li>
+                  <a href="https://mobile-aloha.github.io/" target="_blank" rel="noopener"
+                    >Mobile ALOHA Research</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.ers.usda.gov/data-products/food-access-research-atlas/"
+                    target="_blank"
+                    rel="noopener"
+                    >USDA Food Access Atlas</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Transparency</h3>
+              <p>
+                Educational concept publication. No data collection. No cookies. No sales.
+                Open knowledge sharing.
+              </p>
+              <p class="footer-meta">Last updated: October 2025</p>
+              <p class="footer-meta footer-meta-pricing">
+                <i class="ph ph-calendar-blank"></i>
+                Pricing & statistics: October 2025
+              </p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p class="footer-copyright">
+              © 2025 Johnny Autoseed. Educational resource. No data collection or cookies
+              used. Content available for educational purposes.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Structured Data for SEO (moved from head for faster initial render) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://johnnyautoseed.com/#website",
+            "url": "https://johnnyautoseed.com/",
+            "name": "Johnny Autoseed",
+            "description": "A concept exploring backyard robotics for local food production. Turn unused land into fresh, organic produce with less labor.",
+            "publisher": {
+              "@id": "https://johnnyautoseed.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://johnnyautoseed.com/#organization",
+            "name": "Johnny Autoseed",
+            "url": "https://johnnyautoseed.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://johnnyautoseed.com/images/ja-site-preview.webp"
+            },
+            "description": "Educational concept exploring automated food production systems",
+            "sameAs": []
+          },
+          {
+            "@type": "Article",
+            "@id": "https://johnnyautoseed.com/#article",
+            "isPartOf": {
+              "@id": "https://johnnyautoseed.com/#website"
+            },
+            "author": {
+              "@id": "https://johnnyautoseed.com/#organization"
+            },
+            "headline": "Johnny Autoseed - Planting Robots Where Food Deserts Bloom",
+            "description": "Exploring how backyard robotics and autonomous logistics could turn unused land into productive food systems. A conceptual framework combining FarmBot precision agriculture with Mobile ALOHA-inspired autonomous harvest systems.",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://johnnyautoseed.com/images/ja-site-preview.webp"
+            },
+            "datePublished": "2025-10-01",
+            "dateModified": "2025-10-22",
+            "publisher": {
+              "@id": "https://johnnyautoseed.com/#organization"
+            },
+            "keywords": [
+              "automated farming",
+              "food deserts",
+              "urban agriculture",
+              "robotics",
+              "precision agriculture",
+              "FarmBot",
+              "Mobile ALOHA",
+              "food systems",
+              "sustainable agriculture",
+              "hyperlocal food production"
+            ],
+            "articleSection": "Food Technology",
+            "inLanguage": "en-US",
+            "about": [
+              {
+                "@type": "Thing",
+                "name": "Precision Agriculture",
+                "description": "Automated farming systems using robotics"
+              },
+              {
+                "@type": "Thing",
+                "name": "Food Deserts",
+                "description": "Areas with limited access to fresh, affordable food"
+              },
+              {
+                "@type": "Thing",
+                "name": "Urban Agriculture",
+                "description": "Growing food in urban and suburban environments"
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://johnnyautoseed.com/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://johnnyautoseed.com/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <script type="module" src="/src/main.js?t=1761333478422"></script>
+  </body>
+</html>

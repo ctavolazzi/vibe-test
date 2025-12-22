@@ -14,21 +14,21 @@ async function runCommand(command, description, showOutput = true) {
   try {
     const { stdout, stderr } = await execAsync(command, { maxBuffer: 10 * 1024 * 1024 });
     spinner.succeed(chalk.green(description));
-    
+
     // Show output if requested
     if (showOutput && stdout) {
       console.log(chalk.gray(stdout.trim()));
     }
-    
+
     if (stderr && stderr.trim()) {
       console.log(chalk.yellow('⚠️  Warnings:'));
       console.log(chalk.gray(stderr.trim()));
     }
-    
+
     return { success: true, output: stdout, error: stderr };
   } catch (error) {
     spinner.fail(chalk.red(description));
-    
+
     // Always show error output
     if (error.stdout) {
       console.log(chalk.gray(error.stdout.trim()));
@@ -36,7 +36,7 @@ async function runCommand(command, description, showOutput = true) {
     if (error.stderr) {
       console.log(chalk.red(error.stderr.trim()));
     }
-    
+
     return { success: false, output: error.stdout, error: error.stderr };
   }
 }
@@ -50,13 +50,13 @@ async function runPerformanceTests(url, quick = false) {
   if (quick) {
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     const reportPath = `./vibe-lighthouse-${timestamp}.html`;
-    
+
     const result = await runCommand(
       `npx lighthouse ${url} --output=html --output-path=${reportPath} --chrome-flags="--headless"`,
       'Quick Lighthouse scan',
       false
     );
-    
+
     if (result.success) {
       console.log(chalk.green(`\n📊 Report saved: ${reportPath}`));
       console.log(chalk.gray(`   Open with: open ${reportPath}`));
